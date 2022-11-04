@@ -1,0 +1,19 @@
+class A:
+    classvar1 = "This is class variable of A"  #class variable
+
+    def __init__(self):
+        self.var1 = "I am inside class A's costructor"
+        self.classvar1 = "Instance var in class A"   #intance variable
+        self.special = "Special"
+        self.any = "Any"
+
+class B(A):
+    classvar1 = "This is class variable of B"
+    def __init__(self):
+        super().__init__()
+        self.var1 = "I am inside B's constructor"
+        self.classvar1 = "Instance variable in class B"
+
+a = A()
+b = B()
+print(b.special, b.var1, b.any)
